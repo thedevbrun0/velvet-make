@@ -1,0 +1,760 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+   
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(10deg, rgb(56, 33, 37), rgb(135, 21, 78));
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+
+
+}
+
+
+
+header {
+margin: 0;
+    padding: 0px 4%; 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+
+    z-index: 1000;
+    background-color:rgb(135, 21, 78) ;
+
+}
+
+.logo-velvet {
+    width: 200px;
+    align-items: center;
+
+}
+
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: rgb(44, 23, 34);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+    color: #ff7aa2;
+
+}
+
+
+nav ul li a:active {
+    transform: scale(0.96);
+}
+
+
+
+/* HEADER */
+
+
+
+/* FOTO SECTION ONE  */
+
+main{
+    padding-top: 80px;
+}
+
+.foto-topo {
+    background-image: url(img/imagem\ topo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    position: relative;
+
+
+
+}
+
+
+.foto-topo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(159, 139, 142, 0.7);
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(71, 38, 55);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+
+}
+
+
+.hero-content h1{
+font-size: 50px;
+}
+
+
+.hero-content p{
+    font-size: 30px;
+}
+
+
+.cta-whatsapp2 {
+    margin-top: 20px;
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid rgb(71, 38, 55);
+    color: rgb(71, 38, 55);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.cta-whatsapp2:hover {
+    
+    color: antiquewhite;
+    transform: translateY(-3px);
+}
+
+.cta-whatsapp2:active {
+    transform: scale(0.96);
+}
+
+
+.hero-content button:hover {
+    transform: translateY(-2px) scale(1.02);
+
+}
+
+.hero-content button:active {
+    transform: scale(0.96);
+}
+
+
+
+
+
+
+
+
+/* FOTO SECTION ONE  */
+
+/* FOTO SECTION TWO  */
+
+.services {
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 10px 4%;
+
+
+}
+
+.img-service {
+    width:500px;
+    border-radius: 5px;
+}
+
+
+
+.img2 {
+    flex-direction: row-reverse;
+}
+
+.img1,
+.img2,
+.img3 {
+    margin:80px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+.description-service {
+    width: 600px;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+
+/* FOTO SECTION TWO  */
+
+
+/* SECTION Three Products  */
+
+
+.cta-products{
+margin-top:200px; 
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    
+}
+
+
+
+.products {
+    
+
+    margin: 100px 4%  ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+ 
+}
+
+
+.products1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.product1 img {
+    width:350px;
+    
+}
+
+/* .img-pr{
+    width: 500px;
+} */
+    .product1 a{
+        text-decoration: none;
+        color: antiquewhite;
+    }
+
+.pr:hover{
+  transform: scale(1.05);
+}
+
+
+/* SECTION Three Products  */
+
+
+
+
+
+
+/* Intersection Observer */
+
+.hero-text-off {
+    opacity: 0;
+    ;
+    transition: all 3s;
+    transform: translateY(-100%);
+}
+
+.hero-text-on {
+    opacity: 1;
+    transition: all 3s;
+    transform: translateY(0);
+}
+
+
+
+
+.image-service1-off {
+    opacity: 0;
+filter: blur(5px);
+    transition: all 1s;
+    transform: skewY(-100%);
+}
+
+.image-service1-on {
+    opacity: 1;
+    filter: blur(0px);
+
+    transition: all 2s;
+    transform: skewY(0);
+}
+
+
+
+.description-service1-off {
+    opacity: 0;
+    ;
+    transition: all 1s;
+    transform: translateY(60%);
+}
+
+.description-service1-on {
+    opacity: 1;
+    transition: all 2s;
+    transform: translateY(0);
+}
+
+
+.description-service2-off {
+    opacity: 0;
+    ;
+    transition: all 1s;
+    transform: translateY(-60%);
+}
+
+.description-service2-on {
+    opacity: 1;
+    transition: all 2s;
+    transform: translateY(0);
+}
+
+
+
+
+
+.product-off {
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 1s;
+    transform: translateX(-30%);
+}
+
+.product-on {
+    opacity: 1;
+transition: all 2s;
+filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+
+.cta-off{
+        opacity: 0;
+   
+    transition: all 0.2s;
+    transform: translateY(-100%);
+
+
+}
+
+.cta-on{
+        opacity: 1;
+   
+    transition: all 2s;
+    transform: translateY(0);
+
+
+}
+
+/* Intersection Observer */
+
+
+
+/* Footer  */
+
+footer {
+    margin: 200px 4% 200px;
+    padding: 60px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+   
+}
+
+.contato {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: antiquewhite;
+}
+
+.contato h2 {
+    font-size: 36px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 18px;
+}
+
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+.what img,
+.insta img,
+.tik img{
+      width:30px;
+}
+
+
+.map {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.end{
+    
+    border-top: 0.5px solid antiquewhite ;
+    margin: 20px 4% ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    color: antiquewhite;
+}
+
+
+.logo-velvet-end {
+    width:100px;
+    align-items: center;
+
+}
+
+
+
+
+/* Footer  */
+
+
+
+
+@media (max-width: 1250px) {
+
+.hero-content h1{
+font-size: 30px;
+}
+
+
+.hero-content p{
+    font-size: 15px;
+}
+
+
+.img-service {
+    width:350px;
+    border-radius: 5px;
+}
+
+
+.description-service {
+    width:300px;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+
+.cta-products{
+margin-top:200px; 
+    text-align: center;
+    color: antiquewhite;
+    font-size: 20px;
+   
+    
+    
+}
+
+.product1 img {
+    width:250px;
+    
+}
+
+.descr-pr{
+
+    font-size: 15px;
+    width: 200px;
+}
+
+  }
+
+
+
+  @media (max-width: 770px) {
+
+.hero-content h1{
+font-size: 20px;
+}
+
+
+.hero-content p{
+    font-size: 15px;
+}
+
+
+.img-service {
+    width:300px;
+    border-radius: 5px;
+}
+
+
+.description-service {
+    width:200px;
+    font-size: 15px;
+    color: antiquewhite;
+}
+
+
+.cta-products{
+margin-top:200px; 
+    text-align: center;
+    color: antiquewhite;
+    font-size: 15px;
+   
+    
+    
+}
+
+.product1 img {
+    width:200px;
+    
+}
+
+.descr-pr{
+
+    font-size: 15px;
+    width: 200px;
+}
+
+
+.products {
+    
+
+    margin: 100px 4%  ;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 15px;
+ 
+}
+
+
+  }
+
+
+
+
+   @media (max-width: 608px) {
+
+
+    header {
+margin: 0;
+
+    
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+
+    height: 70px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+
+    z-index: 1000;
+    background-color:rgb(135, 21, 78) ;
+
+}
+
+
+
+.logo-velvet {
+    width:100px;
+    align-items: center;
+   
+
+}
+
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: rgb(44, 23, 34);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+
+main{
+    padding-top: 70px;
+}
+
+.hero-content h1{
+font-size: 18px;
+   overflow-wrap: break-word ;
+    text-align: center;
+}
+
+
+.hero-content p{
+    font-size: 12px;
+    overflow-wrap: break-word ;
+    text-align: center;
+}
+
+
+.services {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px 4%;
+
+
+}
+
+
+
+
+.img-service {
+    width:200px;
+    border-radius: 5px;
+}
+
+.img1,
+.img2,
+.img3{
+    gap: 10px;
+}
+
+
+.description-service {
+    width:150px;
+    font-size: 12px;
+    color: antiquewhite;
+}
+
+
+.cta-products{
+margin-top:200px; 
+    text-align: center;
+    color: antiquewhite;
+    font-size: 15px;
+     overflow-wrap: break-word ;
+    text-align: center;
+   
+    
+    
+}
+
+.product1 img {
+    width:200px;
+    
+}
+
+.descr-pr{
+
+    font-size: 15px;
+    width: 200px;
+}
+
+
+.products {
+    
+
+    margin: 100px 4%  ;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+ 
+}
+
+
+
+
+footer {
+    margin: 200px 4% 200px;
+    padding: 60px 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+   
+}
+
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.logo-velvet-end {
+    width:60px;
+    align-items: center;
+
+}
+.end-p{
+    font-size: 10px;
+}
+
+  }
